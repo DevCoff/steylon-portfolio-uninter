@@ -1,0 +1,284 @@
+/* CSS Reset usando o seletor universal e estilo geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Definições de variáveis para cores */
+:root {
+  --tomato: #ff6347; /* Tomate para destaques e botões */
+  --white: #f4f4f9; /* Branco para o fundo principal */
+  --grey: #333333; /* Cinza escuro para o texto */
+  --white2: #f6f6f8; /* Branco claro para fundos alternativos */
+}
+
+/* Utilização do Flexbox para layouts */
+div.flex {
+  display: flex;
+}
+
+/* Estilo do botão de contato */
+.btn-contato button {
+  padding: 10px 40px; /* Espaçamento interno do botão */
+  font-size: 18px; /* Tamanho da fonte do botão */
+  font-weight: 600; /* Peso da fonte */
+  background-color: var(--tomato); /* Cor de fundo do botão */
+  color: var(--white); /* Cor do texto do botão */
+  border: 0; /* Remove borda padrão */
+  border-radius: 30px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+  transition: 0.2s; /* Transição suave para efeitos de hover */
+}
+
+/* Efeitos de hover para botões */
+button:hover,
+form .btn-enviar input:hover {
+  box-shadow: 0px 0px 8px #ff634773; /* Sombra ao passar o mouse */
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Estilo do título */
+h2.titulo {
+  color: var(--grey); /* Cor do título */
+  font-size: 38px; /* Tamanho da fonte do título */
+  text-align: center; /* Centraliza o título */
+}
+
+/* FIM ESTILIZAÇÃO GERAL */
+
+/* Estilo geral do corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  background-color: var(--white); /* Cor de fundo do corpo */
+  color: var(--grey); /* Cor do texto */
+}
+
+/* Estilo da logo */
+.logo {
+  max-width: 150px; /* Largura máxima da logo */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove espaço abaixo da imagem */
+  margin: 0; /* Remove margens */
+}
+
+/* Estilo da interface centralizada */
+.interface {
+  max-width: 1280px; /* Largura máxima da interface */
+  margin: 0 auto; /* Centraliza a interface */
+}
+
+/* Estilo do cabeçalho */
+header {
+  padding: 5px 4%; /* Espaçamento interno do cabeçalho */
+}
+
+/* Layout do cabeçalho */
+header > .interface {
+  display: flex;
+  align-items: center; /* Alinha itens verticalmente no centro */
+  justify-content: space-between; /* Espaça os itens ao máximo */
+}
+
+/* Estilo dos links do cabeçalho */
+header a {
+  color: var(--grey); /* Cor dos links */
+  text-decoration: none; /* Remove sublinhado dos links */
+  display: inline-block; /* Garante que os links se comportem como blocos */
+  transition: 0.2s; /* Transição suave para efeitos de hover */
+}
+
+/* Efeito de hover nos links do cabeçalho */
+header a:hover {
+  color: #f3816d; /* Cor dos links ao passar o mouse */
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Estilo do menu de navegação no cabeçalho */
+header nav ul {
+  list-style-type: none; /* Remove marcadores de lista */
+}
+
+header nav ul li {
+  display: inline-block; /* Exibe itens da lista na mesma linha */
+  padding: 0 40px; /* Espaçamento horizontal entre itens */
+}
+
+/* Estilo da seção topo do site */
+section.topo-do-site {
+  padding: 40px 4%; /* Espaçamento interno da seção */
+}
+
+/* Layout da seção topo do site */
+section.topo-do-site .flex {
+  align-items: center; /* Alinha itens verticalmente no centro */
+  justify-content: center; /* Centraliza itens horizontalmente */
+  gap: 90px; /* Espaçamento entre itens */
+}
+
+/* Estilo do título da seção topo do site */
+.topo-do-site h1 {
+  color: var(--grey); /* Cor do título */
+  font-size: 42px; /* Tamanho da fonte */
+  line-height: 40px; /* Altura da linha */
+}
+
+/* Estilo do parágrafo na seção topo do site */
+.topo-do-site .txt-topo-site p {
+  color: var(--grey); /* Cor do texto */
+  margin: 40px 0; /* Margens acima e abaixo do parágrafo */
+}
+
+/* Animação de flutuar para a imagem na seção topo do site */
+.topo-do-site .img-topo-site img {
+  position: relative; /* Permite posicionamento relativo */
+  animation: flutuar 2s ease-in-out infinite alternate; /* Animação de flutuar */
+}
+
+@keyframes flutuar {
+  0% {
+    top: 0; /* Posição inicial */
+  }
+  100% {
+    top: 30px; /* Posição final */
+  }
+}
+
+/* Estilização da Seção do Portfólio */
+section.portfolio {
+  padding: 40px 4%; /* Espaçamento interno da seção */
+  background-color: var(--white2); /* Cor de fundo da seção do portfólio */
+}
+
+/* Layout da seção do portfólio */
+section.portfolio .flex {
+  gap: 60px; /* Espaçamento entre caixas de projeto */
+  flex-wrap: wrap; /* Permite que as caixas se movam para a próxima linha */
+}
+
+/* Estilo das caixas de projeto */
+.portfolio .portfolio-box {
+  border: 2px solid var(--grey); /* Borda da caixa de projeto */
+  border-radius: 20px; /* Bordas arredondadas */
+  background-color: var(--white); /* Cor de fundo da caixa de projeto */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra da caixa de projeto */
+  transition: 0.2s; /* Transição suave para efeitos de hover */
+  padding: 20px; /* Espaçamento interno da caixa de projeto */
+  width: 100%; /* Largura total da caixa de projeto */
+  max-width: 350px; /* Largura máxima da caixa de projeto */
+}
+
+/* Efeito de hover nas caixas de projeto */
+.portfolio .portfolio-box:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  box-shadow: 0 0 8px var(--grey); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estilo do título dentro das caixas de projeto */
+.portfolio .portfolio-box h3 {
+  font-size: 24px; /* Tamanho do título */
+  margin: 15px 0; /* Margens acima e abaixo do título */
+}
+
+/* Estilo do parágrafo dentro das caixas de projeto */
+.portfolio .portfolio-box p {
+  color: var(--grey); /* Cor do texto */
+  line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+/* Estilo dos links dentro das caixas de projeto */
+.portfolio-box .ancora-geral {
+  text-decoration: none; /* Remove sublinhado dos links */
+  color: inherit; /* Herda a cor do texto dos elementos pais */
+  display: block; /* Garante que o link ocupe toda a largura da caixa */
+}
+
+/* Estilo da seção de Formação */
+section.formacao {
+  padding: 40px 4%; /* Espaçamento interno da seção */
+  background-color: var(--white); /* Cor de fundo para destacar a seção */
+  color: var(--grey); /* Cor do texto */
+  border-top: 2px solid var(--grey); /* Linha de separação no topo */
+  position: relative; /* Para permitir o posicionamento de elementos internos */
+}
+
+/* Layout da seção de Formação */
+section.formacao .flex {
+  align-items: center; /* Alinha itens verticalmente no centro */
+  gap: 20px; /* Espaçamento entre itens */
+}
+
+/* Estilo do texto na seção de Formação */
+.txt-formacao {
+  max-width: 800px; /* Largura máxima do texto */
+}
+
+/* Estilo do título dentro da seção de Formação */
+.txt-formacao h2 {
+  color: var(--grey); /* Cor do título */
+  font-size: 36px; /* Tamanho do título */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo do parágrafo dentro da seção de Formação */
+.txt-formacao p {
+  font-size: 18px; /* Tamanho da fonte do parágrafo */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  text-align: justify; /* Justifica o texto */
+}
+
+/* Estilo da seção de Contato */
+section.contato {
+  padding: 80px 4%; /* Espaçamento interno da seção */
+}
+
+/* Estilo do formulário de contato */
+form {
+  max-width: 500px; /* Largura máxima do formulário */
+  margin: 0 auto; /* Centraliza o formulário */
+  display: flex; /* Layout flexível */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  flex-direction: column; /* Alinha itens em coluna */
+  gap: 10px; /* Espaçamento entre itens */
+  margin-top: 40px; /* Espaçamento acima do formulário */
+}
+
+/* Estilo dos campos de formulário */
+form input,
+form textarea {
+  width: 100%; /* Largura total dos campos */
+  background-color: rgb(238, 237, 237); /* Cor de fundo dos campos */
+  border: 0; /* Remove borda padrão */
+  outline: 0; /* Remove borda de foco */
+  padding: 20px 15px; /* Espaçamento interno dos campos */
+  border-radius: 15px; /* Bordas arredondadas */
+  color: var(--grey); /* Cor do texto */
+  font-size: 18px; /* Tamanho da fonte */
+}
+
+/* Estilo do placeholder dos campos de formulário */
+form input::placeholder {
+  color: var(--grey); /* Cor do placeholder */
+}
+
+/* Estilo específico para o textarea */
+form textarea {
+  resize: none; /* Remove a opção de redimensionamento */
+  max-height: 200px; /* Altura máxima do textarea */
+}
+
+/* Estilo do botão de envio do formulário */
+form .btn-enviar {
+  margin-top: 20px; /* Espaçamento acima do botão */
+  text-align: center; /* Centraliza o botão */
+}
+
+/* Estilo do botão de envio dentro do formulário */
+form .btn-enviar input {
+  width: 120px; /* Largura do botão */
+  background-color: var(--tomato); /* Cor de fundo do botão */
+  color: var(--white); /* Cor do texto do botão */
+  font-weight: 700; /* Peso da fonte */
+  cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+  transition: 0.2s; /* Transição suave para efeitos de hover */
+}
