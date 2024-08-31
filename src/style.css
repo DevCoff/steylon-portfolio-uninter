@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Definições de variáveis para cores */
 :root {
   --tomato: #ff6347; /* Tomate para destaques e botões */
